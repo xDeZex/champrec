@@ -1,0 +1,64 @@
+.bigpic {
+    height: 60%;
+    position: relative;
+    background-color: #c4dfea!important;
+    display: flex;
+    justify-content: center;
+
+}
+
+.bigpic img {
+    height: auto;
+    width: 40%;
+    object-fit: contain;
+    max-width: 500px;
+    min-width: 421px;
+}
+
+.bigpictext{
+    margin: auto 0px 100px 50px;
+}
+
+.bigpictext h1, .bigpic h1 > span{
+    color: #06394d;
+    font-size: 60px;
+}
+
+h1 > span {
+    display: block;
+}
+
+.bigpic a {
+    text-decoration: none;
+    color: #e89c00;
+
+}
+
+.bigpictext p{
+    font-size: 20px;
+    max-width: 500px;
+}
+
+.bigpictext p:last-of-type{
+    margin-bottom: 200px;
+}
+
+.bigpic a.button {
+    padding: 10px;
+    border-color: #06394d;
+    border-width: 3px;
+    border-style: solid;
+    color: white;
+    background-color: #06394d;
+    font-weight: 00;
+}
+
+.bigpic a.button:last-of-type {
+    margin-left: 10px;
+    background-color: inherit;
+    color: #06394d;
+}
+
+.buttonscon {
+    display: flex;
+}

@@ -1,0 +1,72 @@
+.bigpic a, .textcontainer a {
+    text-decoration: none;
+    color: #e89c00;
+
+}
+
+
+
+
+
+
+.textcontainer {
+    justify-content: center;
+    margin-top: 100px;
+    display: flex;
+    min-width: 1000px;
+    scroll-margin-top: 50px;
+}
+
+.textcontainer article {
+    padding: 1em;
+}
+.textcontainer .l1flex div{
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.textcontainer h1 {
+    color: #76716b;
+    margin-top: 0;
+}
+
+.textcontainer h5 {
+    color: #76716b;
+    margin: 0;
+}
+
+.textcontainer img {
+    width: 150px;
+    object-fit: cover;
+    padding: 0em 0em 1em 0em;
+}
+
+.l2 {
+    display: flex
+}
+
+.l1 {
+    max-width: 700px;
+    border-style: solid;
+    border-width: 0px 1px 0px 0px;
+    padding-right: 1em;
+    margin-left: none;
+}
+
+.r1 {
+    max-width: 300px;
+}
+
+.l1flex {
+    display: flex;
+    
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    padding-bottom: 1em;
+}
+
+.l2 article:first-child{
+    border-style: solid;
+    border-width: 0px 1px 0px 0px;
+}

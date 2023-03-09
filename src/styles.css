@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+a {
+    font-weight: 1;
+    font-size: 20px;
+    
+}
+
+p {
+    line-height: 1.3em;
+}
+
+*{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

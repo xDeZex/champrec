@@ -1,0 +1,47 @@
+.branches {
+    margin-top: 100px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-width: 1000px;
+    margin: 0px 50px;
+    scroll-margin-top: 70px;
+}
+
+.branches ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.branches h1{
+    color: #06394d;
+    font-size: 60px;
+}
+
+.branches h1 {
+    font-size: 40px;
+}
+
+.branches ul {
+    margin: 0 auto;
+    min-width: 1000px;
+}
+.branches li {
+    height: 130px;
+    float: left;
+}
+
+.branches h1, .branches p {
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+}
+
+.branches p{
+    margin-top: 0;
+}
+.branches a {
+    height: 0;
+}
