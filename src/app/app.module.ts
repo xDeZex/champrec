@@ -12,6 +12,8 @@ import { RecommendComponent } from './recommend/recommend.component';
 import { BodyComponent } from './body/body.component';
 import { RecComponent } from './rec/rec.component';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { HttpClientModule } from '@angular/common/http';
+import { DisplayRecComponent } from './display-rec/display-rec.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
     MainComponent,
     RecommendComponent,
     BodyComponent,
-    RecComponent
+    RecComponent,
+    DisplayRecComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,91 @@
+.rec {
+    height: 60vh;
+    position: relative;
+    background-color: #c4dfea!important;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    min-width: 1050px;
+}
+
+.recInput{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    max-width: 80%;
+}
+
+.recInput > input {
+    background-color: #06394d;
+    border-radius: 10px;
+    font-size: 2em;
+    width: 13em;
+    color: white;
+    padding: 10px;
+}
+
+.inputContainer{
+    flex-grow: 1;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 100%;
+}
+
+.rectext{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items:start;
+    padding-left: 10%;
+}
+
+.rectext h1, .rec h1 > span{
+    color: #06394d;
+    font-size: 60px;
+    max-width: 400px;
+}
+
+h1 > span {
+    display: block;
+}
+
+.rec a {
+    text-decoration: none;
+    color: #e89c00;
+
+}
+
+.rectext p{
+    font-size: 20px;
+    max-width: 400px;
+}
+
+.rectext p:last-of-type{
+    margin-bottom: auto;
+}
+
+.rec button {
+    margin-top: 1em;
+    padding: 10px;
+    border-color: #06394d;
+    border-width: 3px;
+    border-style: solid;
+    color: white;
+    background-color: #06394d;
+    font-weight:100;
+    font-size: 20px;
+    max-width: fit-content;
+}
+
+.rec button:last-of-type {
+    max-width: none;
+    width: 88.156px;
+    margin-left: 10px;
+    background-color: inherit;
+    color: #06394d;
+}
+
+.buttonContainer {
+    display: flex;
+}
