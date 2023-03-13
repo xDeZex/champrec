@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { ShareRecommendationService } from '../share-recommendation.service';
 import { Recommendation } from '../recommendation';
-
+import { Router } from '@angular/router';
+import { Summoner } from '../summoner';
 
 @Component({
   selector: 'app-display-rec',
@@ -10,7 +11,14 @@ import { Recommendation } from '../recommendation';
 })
 export class DisplayRecComponent {
 
-  constructor(private shareService: ShareRecommendationService){}
+  constructor(private shareService: ShareRecommendationService, private router: Router){}
 
   recommendation: Recommendation = this.shareService.recommendation
+  summoner: Summoner = this.shareService.summoner
+
+  ngOnInit(){
+    if(!this.recommendation.one || this.recommendation.error){
+      this.router.navigate(['/recommend'])
+    }
+  }
 }

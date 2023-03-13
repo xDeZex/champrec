@@ -2,11 +2,8 @@
     <div class="block"></div>
     <ul class="headermenu">
       <img class="companypic" src="..\..\assets\name.png">
-      <li><a routerLink="/recommend">Buttons</a></li>
-      <li><a href="#highlights">That</a></li>
-      <li><a href="#highlights">Currently</a></li>
-      <li><a href="#highlights">And Probably</a></li>
-      <li><a href="#highlights">Forever</a></li>
-      <li><a href="#highlights">Do Nothing</a></li>
+      
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+      <li><a routerLink="/recommend" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Champion Recommendation</a></li>
     </ul>
   </header>

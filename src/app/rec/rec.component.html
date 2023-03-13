@@ -9,7 +9,7 @@
           </div>
           <p *ngIf="summoner2.error">{{summoner2.name}}</p>
           <p *ngIf="recommendation.error">{{recommendation.one}}</p>
-          <p *ngIf="summoner2.name && !summoner2.error">Added user: {{summoner2.name}}</p>
+          <p *ngIf="summoner2.name && !summoner2.error && !recommendation.error">Added user: {{summoner2.name}}</p>
         </div>
         <div class="rectext">
           <h1>

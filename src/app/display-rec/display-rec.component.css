@@ -1,0 +1,28 @@
+.displayRec {
+    height: 60vh;
+    position: relative;
+    background-color: #c4dfea!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 1050px;
+    align-items: center;
+}
+
+.imgContainer > img{
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 5px;
+}
+
+.one {
+
+}
+
+.two {
+    height: 100px;
+}
+.three {
+    height: 80px;
+}

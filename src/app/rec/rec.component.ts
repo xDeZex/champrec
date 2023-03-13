@@ -18,7 +18,7 @@ export class RecComponent {
 
   createSummoner() {
     if (this.summoner.name) {
-      this.summoner.error = false
+      this.summoner2.error = false
       this.recommendation.error = false
       let obs = this.recService.postSummoner(this.summoner)
       obs.subscribe(summonerJSON => {
@@ -33,10 +33,9 @@ export class RecComponent {
     
     if (this.summoner.name) {
       this.recommendation.error = false
-      this.summoner.error = false
+      this.summoner2.error = false
       let obs = this.recService.getSummoner(this.summoner)
       obs.subscribe(recJSON => {
-        console.log(recJSON)
         this.recommendation.one = recJSON.one;
         this.recommendation.two = recJSON.two;
         this.recommendation.three = recJSON.three;
@@ -44,14 +43,12 @@ export class RecComponent {
         if(!this.recommendation.error){
           this.shareService.setRecommendation(this.recommendation)
           this.shareService.setSummoner(this.summoner)
-          console.log(this.recommendation)
           this.router.navigate(['/recommended'])
         }
         else {
           this.summoner.name = "";
         }
       });
-      console.log(this.recommendation)
     }
   }
 

@@ -2,7 +2,7 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    min-width: 1100px;
+    min-width: 1000px;
 }
 
 .block {
@@ -15,6 +15,10 @@ header {
     width: 200px;
     margin-right: 2em;
     background-color: white;
+}
+
+.active {
+    color:#06394dab !important
 }
 
 .headermenu {
