@@ -22,53 +22,42 @@ export class RecServiceService {
 
   postSummoner(summoner: Summoner): Observable<Summoner> {
     //https://localhost:7158/post/{{summoner}}
-    console.log(`${this.createURL}${summoner.name}`)
     let ret: Observable<any> = new Observable()
     try {
       
       ret = this.http.post<JSON>(`${this.createURL}${summoner.name}`, this.httpOptions).pipe(
         catchError(this.handleError)
       );
-      console.log("FWAAW")
     } catch (error: any) {
-      console.log("ERROR")
       this.error = error.message
       ret = new Observable
     }
-    console.log("AFTER")
     
     return ret;
   }
 
   getSummoner(summoner: Summoner): Observable<Recommendation> {
     //https://localhost:7158/post/{{summoner}}
-    console.log(`${this.getURL}${summoner.name}`)
     let ret: Observable<any> = new Observable()
     try {
       
       ret = this.http.get<JSON>(`${this.getURL}${summoner.name}`, this.httpOptions).pipe(
         catchError(this.handleError)
       );
-      console.log("FWAAW")
     } catch (error: any) {
-      console.log("ERROR")
       this.error = error.message
       ret = new Observable
     }
-    console.log("AFTER")
     
     return ret;
   }
 
 
   private handleError(error: HttpErrorResponse, caught: Observable<JSON>) {
-    console.log("ERRROR HANDL")
     if (error.status === 0) {
       // A client-side or network error occurred. Handle it accordingly.
-      console.error('An error occurred:', error.error);
     } 
     else if (error.status === 409){ 
-      console.log("TEST")
       let summoner: Summoner = {
         name: error.error.detail,
         error: true
@@ -76,7 +65,15 @@ export class RecServiceService {
       return of(summoner)
     }
     else if (error.status === 404){ 
-      console.log("TEST")
+      let recommendation: Recommendation = {
+        one: error.error.detail,
+        two: error.error.detail,
+        three: error.error.detail,
+        error: true
+      }
+      return of(recommendation)
+    }
+    else if (error.status === 406){ 
       let recommendation: Recommendation = {
         one: error.error.detail,
         two: error.error.detail,
