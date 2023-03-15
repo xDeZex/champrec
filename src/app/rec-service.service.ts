@@ -9,8 +9,8 @@ import { Recommendation } from './recommendation';
   providedIn: 'root'
 })
 export class RecServiceService {
-  private createURL = "https://localhost:7158/post/"
-  private getURL = "https://localhost:7158/get/"
+  private createURL = "https://oguingq7nn6tyymts6zy24v5sm0nkcfb.lambda-url.eu-north-1.on.aws/post/"
+  private getURL = "https://oguingq7nn6tyymts6zy24v5sm0nkcfb.lambda-url.eu-north-1.on.aws/get/"
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };

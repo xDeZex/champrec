@@ -49,7 +49,7 @@ input:-webkit-autofill:active{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    align-items:start;
+    align-items:flex-start;
     padding-left: 10%;
 }
 
