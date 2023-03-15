@@ -8,15 +8,13 @@ import { Recommendation } from './recommendation';
 export class ShareRecommendationService {
 
   public summoner: Summoner = {
-    name: "",
-    error: false
+    name: ""
   }
 
   public recommendation: Recommendation = {
     one: "",
     two: "",
-    three: "",
-    error: false
+    three: ""
   }
 
   constructor() { }

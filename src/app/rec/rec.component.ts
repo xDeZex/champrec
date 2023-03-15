@@ -4,6 +4,8 @@ import { RecServiceService } from '../rec-service.service';
 import { Recommendation } from '../recommendation';
 import { ShareRecommendationService } from '../share-recommendation.service';
 import { Router } from '@angular/router';
+import { ErrorWrapper } from '../errorWrapper';
+import { HMError } from "../error";
 
 @Component({
   selector: 'app-rec',
@@ -17,53 +19,41 @@ export class RecComponent {
     private router: Router) {}
 
   createSummoner() {
-    if (this.summoner.name) {
-      this.summoner2.error = false
-      this.recommendation.error = false
-      let obs = this.recService.postSummoner(this.summoner)
-      obs.subscribe(summonerJSON => {
-        this.summoner2.name = summonerJSON.name;
-        this.summoner2.error = summonerJSON.error;
-      });
-      this.summoner.name = "";
+    if(this.name != "" && !this.processingRequest){
+      this.processingRequest = true
+      this.response.body = null
+      this.response.error = null
+      let obs = this.recService.postSummoner(this.name)
+      obs.subscribe(recJSON => {
+        this.response = recJSON
+        this.processingRequest = false
+      })
     }
   }
 
   getSummoner() {
-    
-    if (this.summoner.name) {
-      this.recommendation.error = false
-      this.summoner2.error = false
-      let obs = this.recService.getSummoner(this.summoner)
+    if(this.name != "" && !this.processingRequest){
+      this.processingRequest = true
+      this.response.body = null
+      this.response.error = null
+      let obs = this.recService.getSummoner(this.name)
       obs.subscribe(recJSON => {
-        this.recommendation.one = recJSON.one;
-        this.recommendation.two = recJSON.two;
-        this.recommendation.three = recJSON.three;
-        this.recommendation.error = recJSON.error;
-        if(!this.recommendation.error){
-          this.shareService.setRecommendation(this.recommendation)
-          this.shareService.setSummoner(this.summoner)
+        this.response = recJSON
+        console.log(this.response)
+        if (this.response.body != null) {
+          this.shareService.setRecommendation(this.response.body)
+          this.shareService.setSummoner({name: this.name})
           this.router.navigate(['/recommended'])
         }
-        else {
-          this.summoner.name = "";
-        }
-      });
+        this.processingRequest = false
+      })
     }
-  }
 
-  recommendation: Recommendation = {
-    one: "",
-    two: "",
-    three: "",
-    error: false
   }
-  summoner: Summoner = {
-    name: "",
-    error: false
-  };
-  summoner2: Summoner = {
-    name: "",
-    error: false
-  };
+  processingRequest: boolean = false
+  name: string = ""
+  response: ErrorWrapper = {
+    error: null,
+    body: null
+  }
 }

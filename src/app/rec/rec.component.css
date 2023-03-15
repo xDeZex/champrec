@@ -1,18 +1,35 @@
 .rec {
-    height: 60vh;
+    height: calc(100vh - 70px);
     position: relative;
     background-color: #c4dfea!important;
     display: flex;
     justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
     width: 100vw;
-    min-width: 1050px;
+}
+
+@media only screen and (max-width: 1050px) {
+    .inputContainer {
+        flex-direction: column-reverse !important;
+    }
+    .recInput {
+        margin-top: 2em;
+    }
+    .rectext {
+        padding-left: 0px !important;
+    }
+    
+}
+
+.rec > * {
+    margin-top: 2vh;
 }
 
 .recInput{
     display: flex;
     flex-direction: column;
     height: 50%;
-    max-width: 80%;
 }
 
 input:-webkit-autofill,
@@ -78,6 +95,7 @@ h1 > span {
     margin-bottom: auto;
 }
 
+
 .rec button {
     margin-top: 1em;
     padding: 10px;
@@ -89,7 +107,8 @@ h1 > span {
     font-weight:100;
     font-size: 20px;
     max-width: fit-content;
-}
+    cursor:pointer;
+}   
 
 .rec button:last-of-type {
     max-width: none;
@@ -102,3 +121,16 @@ h1 > span {
 .buttonContainer {
     display: flex;
 }
+
+.loading {
+    color:#06394d;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.5em;
+}
+
+.deactivated{
+    cursor: wait !important;
+}
+
+

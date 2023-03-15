@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'champrec';
+  //TODO: back button after recommended, data hantering med classer
 }

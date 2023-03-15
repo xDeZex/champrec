@@ -17,7 +17,7 @@ export class DisplayRecComponent {
   summoner: Summoner = this.shareService.summoner
 
   ngOnInit(){
-    if(!this.recommendation.one || this.recommendation.error){
+    if(!this.recommendation.one){
       this.router.navigate(['/recommend'])
     }
   }

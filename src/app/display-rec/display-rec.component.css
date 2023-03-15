@@ -1,5 +1,5 @@
 .displayRec {
-    height: 60vh;
+    height: calc(100vh - 70px);
     position: relative;
     background-color: #c4dfea!important;
     display: flex;
