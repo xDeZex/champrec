@@ -56,12 +56,13 @@ header {
     color: #06394dab;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 670px) {
     .headermenu {
         min-width:auto !important;
         flex-direction: column;
         padding-top: 1em !important;
         position: relative;
+        height: 130px;
     }
     .companypic{
         margin: 0;

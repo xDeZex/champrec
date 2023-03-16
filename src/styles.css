@@ -16,5 +16,26 @@ p {
     font-weight: 700;
     font-family:'Libre Franklin', 'Arial Narrow', Arial, sans-serif;
 }
-html, body { height: 100%; }
-body { margin: 0;}
+body { 
+    margin: 0;
+}
+
+/*https://paletton.com/#uid=33E0k0kq4uxgaG4ljxNudq4wukB*/
+:root{
+    --primary-2: #C2D7F4;
+    --primary1: #6691CD;
+    --primary2: #4074BB;
+    --primary3: #215DB0;
+    --primary4: #0C4695;
+    --primary5: #083674;
+    --secondary1: #FFDA72;
+    --secondary2: #FFCF48;
+    --secondary3: #FFC41C;
+    --secondary4: #E2A700;
+    --secondary5: #B18200;
+    --trimary1: #FFB672;
+    --trimary2: #FFA048;
+    --trimary3: #FF891C;
+    --trimary4: #E26D00;
+    --trimary5: #B15500;    
+}

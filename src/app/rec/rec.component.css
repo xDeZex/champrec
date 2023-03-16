@@ -60,8 +60,11 @@ input:-webkit-autofill:active{
 
 .rectext h1, .rec h1 > span{
     color: #06394d;
-    font-size: 60px;
-    max-width: 400px;
+    font-size: 50px;
+}
+
+.rectext h1, .rec h1 > span, .rectext p{
+    max-width: 425px;
 }
 
 h1 > span {
@@ -76,7 +79,6 @@ h1 > span {
 
 .rectext p{
     font-size: 20px;
-    max-width: 400px;
 }
 
 .rectext p:last-of-type{
@@ -92,7 +94,6 @@ h1 > span {
     border-style: solid;
     color: white;
     background-color: #06394d;
-    font-weight:100;
     font-size: 20px;
     max-width: fit-content;
     cursor:pointer;
@@ -122,9 +123,16 @@ h1 > span {
 }
 
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 670px) {
     .rec {
-        height:calc(100vh - 130px);
+        height: calc(100vh - 146px)
+    }
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .rectext h1, .rec h1 > span, .rectext p{
+        max-width: 425px;
     }
     .inputContainer {
         flex-direction: column-reverse;
@@ -140,6 +148,7 @@ h1 > span {
     .rectext {
         padding-left: 1em;
         padding-right: 1em;
+        align-items: center;
     }
     .rectext h1, .rec h1 > span{
         color: #06394d;

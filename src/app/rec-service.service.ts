@@ -25,7 +25,7 @@ export class RecServiceService {
   ) { }
 
   postSummoner(summoner: string): Observable<ErrorWrapper> {
-    this.createURL = "https://localhost:7158/post/"
+    //this.createURL = "https://localhost:7158/post/"
 
     let ret: Observable<any> = new Observable()
     try {
@@ -42,7 +42,7 @@ export class RecServiceService {
   }
 
   getSummoner(summoner: string): Observable<ErrorWrapper> {
-    this.getURL = "https://localhost:7158/get/"
+    //this.getURL = "https://localhost:7158/get/"
     let ret: Observable<any> = new Observable()
     try {
       
