@@ -1,3 +1,5 @@
+
+
 header {
     display: flex;
     justify-content: center;
@@ -52,4 +54,16 @@ header {
 
 .headermenu li a:hover {
     color: #06394dab;
+}
+
+@media only screen and (max-width: 550px) {
+    .headermenu {
+        min-width:auto !important;
+        flex-direction: column;
+        padding-top: 1em !important;
+        position: relative;
+    }
+    .companypic{
+        margin: 0;
+    }
 }

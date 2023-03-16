@@ -9,18 +9,6 @@
     width: 100vw;
 }
 
-@media only screen and (max-width: 1050px) {
-    .inputContainer {
-        flex-direction: column-reverse !important;
-    }
-    .recInput {
-        margin-top: 2em;
-    }
-    .rectext {
-        padding-left: 0px !important;
-    }
-    
-}
 
 .rec > * {
     margin-top: 2vh;
@@ -134,3 +122,32 @@ h1 > span {
 }
 
 
+@media only screen and (max-width: 1050px) {
+    .rec {
+        height:calc(100vh - 130px);
+    }
+    .inputContainer {
+        flex-direction: column-reverse;
+    }
+    .recInput {
+        margin-top: 2em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .recInput > input{
+        width: calc(100% - 32px);
+    }
+    .rectext {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .rectext h1, .rec h1 > span{
+        color: #06394d;
+        font-size: 60px;
+        max-width: 400px;
+    }
+    .rec > * {
+        margin-top: 0vh;
+    }
+
+}

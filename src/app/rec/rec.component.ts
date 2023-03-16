@@ -14,6 +14,12 @@ import { HMError } from "../error";
 })
 export class RecComponent {
 
+  ngOnInit() {
+    if (window.screen.width <= 550) { // 768px portrait
+      this.mobile = true;
+    }
+  }
+
   constructor(private recService: RecServiceService, 
     private shareService: ShareRecommendationService, 
     private router: Router) {}
@@ -56,4 +62,5 @@ export class RecComponent {
     error: null,
     body: null
   }
+  mobile: boolean = false
 }
