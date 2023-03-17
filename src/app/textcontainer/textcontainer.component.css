@@ -1,20 +1,13 @@
 .bigpic a, .textcontainer a {
     text-decoration: none;
-    color: #e89c00;
 
 }
 
-
-
-
-
-
 .textcontainer {
     justify-content: center;
-    margin-top: 100px;
     display: flex;
-    min-width: 1000px;
     scroll-margin-top: 50px;
+    padding-top: 3rem;
 }
 
 .textcontainer article {
@@ -26,13 +19,11 @@
 
 }
 
-.textcontainer h1 {
-    color: #76716b;
+.textcontainer h4 {
     margin-top: 0;
 }
 
 .textcontainer h5 {
-    color: #76716b;
     margin: 0;
 }
 
@@ -44,6 +35,10 @@
 
 .l2 {
     display: flex
+}
+
+.l1, .l1flex {
+    border-color: var(--primary3);
 }
 
 .l1 {

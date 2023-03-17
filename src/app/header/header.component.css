@@ -19,7 +19,21 @@ header {
 }
 
 .active {
-    color:#06394dab !important
+    color:var(--primary1) !important;
+}
+
+a::after {
+    
+    display: block;
+    content: "";
+    border-bottom: 1px solid var(--primary1);
+    
+    transform: scaleX(0);  
+}
+
+.active::after {
+    transition: transform 250ms ease-in-out;
+    transform: scaleX(1) !important;
 }
 
 .headermenu {
@@ -46,14 +60,14 @@ header {
 
 .headermenu li a {
     display: block;
-    color: #06394d;
+    color: var(--primary5);
     text-align: center;
-    padding: 10px 24px;
+    margin: 0.5rem 1rem;
     text-decoration: none;
 }
 
 .headermenu li a:hover {
-    color: #06394dab;
+    color: var(--primary3);
 }
 
 @media only screen and (max-width: 670px) {

@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DisplayRecComponent } from './display-rec/display-rec.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     RecommendComponent,
     BodyComponent,
     RecComponent,
-    DisplayRecComponent
+    DisplayRecComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

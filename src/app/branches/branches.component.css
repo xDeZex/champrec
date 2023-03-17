@@ -1,47 +1,108 @@
 .branches {
-    margin-top: 100px;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    min-width: 1000px;
-    margin: 0px 50px;
     scroll-margin-top: 70px;
+    text-align: center;
+    gap: 3rem;
 }
 
-.branches ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.branches h1{
-    color: #06394d;
-    font-size: 60px;
-}
-
-.branches h1 {
-    font-size: 40px;
-}
-
-.branches ul {
-    margin: 0 auto;
-    min-width: 1000px;
-}
-.branches li {
-    height: 130px;
-    float: left;
-}
-
-.branches h1, .branches p {
-    justify-self: center;
-    margin-left: auto;
+.boxContainer{
+    display: flex;
+    flex-direction: row;
     margin-right: auto;
-    max-width: 500px;
+    margin-left: auto;
+    max-width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
 }
 
-.branches p{
-    margin-top: 0;
+.textBox{
+    display: block;
+    border-radius: 1rem;   
+    width: 12rem; 
+    height: 12rem;
+    text-align: center;
+    background-color: var(--trimary3);
+    padding: 1rem;
+    padding-top: 0rem;
 }
-.branches a {
-    height: 0;
+
+.textBox p {
+    color: black;
+}
+
+.textBox:hover{
+    box-shadow:0rem 0rem 1rem 0.1rem var(--trimary1);
+}
+
+
+
+.textBox h4{
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    display: flex;
+    align-content: center;
+    column-gap: 0.25em;
+    justify-content: center;
+}
+
+.textBox h4 > span{
+    display: block;
+    font-family:var(--fontSecondary);
+    color: black;
+    width: min-content;
+    
+}
+
+
+.textBox:hover h4 > span::after{
+    transform: scaleX(1) !important;
+    transform-origin:0% 50%;
+}
+
+
+.textBox h4 > span:last-child::after{
+    transition-delay: 350ms;
+    transition-timing-function: ease-in !important;
+}
+
+
+.textBox h4 > span:first-child::after{
+    transition-delay: 0ms !important;
+    transition-timing-function: ease-out;
+}
+
+.textBox:hover h4 > span:last-child::after{
+    transition-timing-function: ease-out;
+}
+
+
+.textBox:hover h4 > span:first-child::after{
+    transition-timing-function: ease-in !important;
+}
+
+.textBox h4 > span::after {
+    display: block;
+    content: "";
+    border-bottom: 1px solid black;
+    transition: transform 300ms ease-in;
+    transform: scaleX(0); 
+    transform-origin: 100% 50%; 
+}
+
+.textBox p {
+    font-family:var(--fontTrimary);
+    font-weight: 400;
+}
+
+.textBox:nth-child(even){
+    background-color: var(--primary-2);
+}
+
+.textBox:hover:nth-child(even){
+    box-shadow:0rem 0rem 1rem 0.1rem var(--primary-2);
 }
