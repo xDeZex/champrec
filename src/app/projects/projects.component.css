@@ -1,0 +1,19 @@
+.projects{
+    display: flex;
+    flex-direction: column  ;
+}
+.projectContainer{
+    margin: 3rem 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    column-gap: 3rem;
+}
+
+.headline{
+    flex-basis: 50%;
+}
+
+.text{
+    flex-basis: 50%;
+}
