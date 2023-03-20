@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { fromEvent, Observable, Subject, takeUntil } from 'rxjs';
+import { WindowScrollService } from './window-scroll.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'champrec';
-  //TODO: back button after recommended, data hantering med classer
+	title = 'champrec';
+  
+	
+	destroy = new Subject();
+	
+	destroy$ = this.destroy.asObservable();
+    
+	constructor(scrollService: WindowScrollService) {
+		fromEvent(window, 'scroll').pipe(takeUntil(this.destroy$))
+			.subscribe((e: Event) => scrollService.updateScrollY(window.scrollY));
+	}
+
+	ngOnDestroy(): void {
+	    this.destroy.complete()
+	}
 }

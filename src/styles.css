@@ -33,8 +33,12 @@ h3 {font-size: var(--font-size--large)}
 h2 {font-size: var(--font-size--large)}
 h1 {font-size:var(--font-size--x-large)} 
 
-h1, h2, h3, h4, h5, p, span {
+h1, h2, h3, h4, h5{
     color: var(--primary5);
+}
+
+p, span {
+    color: var(--font-bread-color);
 }
 
 /*https://paletton.com/#uid=33E0k0kq4uxgaG4ljxNudq4wukB*/
@@ -58,6 +62,7 @@ h1, h2, h3, h4, h5, p, span {
     --trimary3: #FF891C;
     --trimary4: #E26D00;
     --trimary5: #B15500;    
+
     font-size: clamp(15px,1vw,20px);
     --font-size--xsmall: 0.76rem;
     --font-size--small: 0.86rem;
@@ -66,4 +71,6 @@ h1, h2, h3, h4, h5, p, span {
     --font-size--heading: 1.38rem;
     --font-size--large: 2.15rem;
     --font-size--x-large: 3.75rem;
+
+    --font-bread-color: #000000;
 }

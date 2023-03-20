@@ -37,6 +37,7 @@ a::after {
 }
 
 .headermenu {
+    transition: top .2s ease-out;
     padding: 0;
     min-width: 1100px;
     min-height: 70px;
