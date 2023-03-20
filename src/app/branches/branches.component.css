@@ -2,9 +2,13 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    scroll-margin-top: 70px;
     text-align: center;
     gap: 3rem;
+}
+
+#press {
+    scroll-margin-top: 3rem;
+
 }
 
 .boxContainer{
@@ -12,7 +16,7 @@
     flex-direction: row;
     margin-right: auto;
     margin-left: auto;
-    max-width: 80%;
+    max-width: 70rem;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 1rem;
@@ -21,8 +25,8 @@
 .textBox{
     display: block;
     border-radius: 1rem;   
-    width: 12rem; 
-    height: 12rem;
+    width: 13rem; 
+    height: 13rem;
     text-align: center;
     background-color: var(--trimary3);
     padding: 1rem;
@@ -31,6 +35,7 @@
 
 .textBox p {
     color: black;
+    margin-top: 0;
 }
 
 .textBox:hover{
