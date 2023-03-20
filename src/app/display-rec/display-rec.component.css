@@ -1,19 +1,29 @@
 .displayRec {
     height: calc(100vh - 70px);
     position: relative;
-    background-color: #c4dfea!important;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    width: 100%;
-    min-width: 1050px;
     align-items: center;
+    margin: 0rem 3rem;
 }
 
 .imgContainer > img{
-    margin-left: 1em;
-    margin-right: 1em;
+    margin: 1rem;
     border-radius: 5px;
+}
+
+.imgContainer{
+    
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textContainer{
+    
+    flex-basis: 50%;
 }
 
 .one {
@@ -25,4 +35,21 @@
 }
 .three {
     height: 80px;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .imgContainer{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .displayRec{
+        flex-direction: column;
+        height: auto;
+        margin: 0rem 1rem;
+    }
+
+    
 }
