@@ -22,7 +22,6 @@
 
 .bigpictext h1, .bigpic h1 > span{
     color: var(--primary5);
-    font-size: 60px;
 }
 
 h1 > span {
@@ -36,7 +35,6 @@ h1 > span {
 }
 
 .bigpictext p{
-    font-size: 20px;
     width: 500px;
     color: var(--primary5);
 }
@@ -77,11 +75,9 @@ h1 > span {
 
 @media only screen and (max-width: 670px) {
     .bigpic h1 > span {
-        font-size: 40px;
     }
 
     .bigpictext p{
-        font-size: 15px;
         width: auto;
     }
 
@@ -91,6 +87,5 @@ h1 > span {
     }
 
     .bigpictext p:last-of-type{
-        margin-bottom: 20%;
     }
 }

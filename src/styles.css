@@ -26,6 +26,10 @@ a {
     font-family:var(--fontPrimary);
 
 }
+p{
+    font-weight: 400 !important;
+}
+
 p {font-size: var(--font-size--medium)}
 h5 {font-size: var(--font-size--subheading)}
 h4 {font-size: var(--font-size--heading)}

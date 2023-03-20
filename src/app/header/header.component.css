@@ -79,6 +79,9 @@ a::after {
         position: relative;
         height: 130px;
     }
+    .block{
+        height: 145px;
+    }
     .companypic{
         margin: 0;
     }

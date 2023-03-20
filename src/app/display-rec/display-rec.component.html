@@ -1,9 +1,13 @@
 <app-header></app-header>
 <div class="displayRec">
     <div class="imgContainer">
-        <img src=".\assets\champs\{{recommendation.two}}square.webp" class="two">
         <img src=".\assets\champs\{{recommendation.one}}square.webp" class="one">
+        <img src=".\assets\champs\{{recommendation.two}}square.webp" class="two">
         <img src=".\assets\champs\{{recommendation.three}}square.webp" class="three">
     </div>
-    <p>The recommended champions for {{summoner.name}}</p>
+    <div class="textContainer">
+        
+        <p>The recommended champions for {{summoner.name}} are: {{recommendation.one}}, {{recommendation.two}} and {{recommendation.three}}.</p>
+        <p>To make these recommendations thousands of summoners which play similar champions are grouped together. The mastery points of {{summoner.name}} was than compared with the most similar group of summoners, and the champions the group has played more of than the summoner is found. Then, the three champions with the largest difference — and aren't among the most played — are chosen as recommendations.</p>
+    </div>
 </div>
