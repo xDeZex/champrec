@@ -6,7 +6,9 @@ header {
     flex-direction: row;
 }
 
-.block {
+header::before{
+    display: block;
+    content: "";
     height: 70px;
 }
 
