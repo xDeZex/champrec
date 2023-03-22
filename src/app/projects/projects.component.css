@@ -16,14 +16,39 @@
     margin-top: var(--font-size--medium);
 }
 
-.text > a{
+.project__text > a{
     margin-right: 0.5rem;
 }
-.headline{
+
+.project__headline > * {
+    text-transform: uppercase;
+}
+.project__headline{
     flex-basis: 50%;
 }
 
-.text{
+.project__text{
     flex-basis: 50%;
 }
 
+.project__headline--left h3{
+    text-align: right;
+}
+
+.project__headline--right{
+    flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 970px) {
+}
+
+
+@media only screen and (max-width: 670px) {
+    .projectContainer{
+        flex-direction: column;
+    }
+
+    .project__headline--left h3, .project__headline--right h3{
+        text-align: center;
+    }
+}

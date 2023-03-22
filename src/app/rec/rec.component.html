@@ -1,7 +1,6 @@
 <div class="rec">
-    <div>
       <div class="inputContainer">
-        <div class="recInput" [class.deactivated] = "processingRequest">
+        <div class="rec__input" [class.deactivated] = "processingRequest">
           <input id="name" [class.deactivated] = "processingRequest" [(ngModel)]="name" placeholder="Username..." maxlength="24" [disabled]="processingRequest">
           <div class="buttonContainer" >
             <button id="button1" [class.deactivated] = "processingRequest" for="name" (click)="createSummoner()">Submit</button>
@@ -13,14 +12,12 @@
                 <span style="margin-top: auto; margin-bottom: auto;" *ngIf="processingRequest">AI is analysing your playstyle.</span>
           </span>
         </div>
-        <div class="rectext">
+        <div class="rec__text">
           <h1 *ngIf="!mobile">
             Champion Recommendation
           </h1>
           <p>Get recommendations on which LoL champion to play next.</p>
           <p>Enter your username and AI will analyse your LoL account and give you personalized recommendations for which champions to learn next.</p>
         </div>  
-      </div>
-    </div>
-    
+      </div>    
 </div>

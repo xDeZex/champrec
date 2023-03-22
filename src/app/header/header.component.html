@@ -1,8 +1,7 @@
-<header>
-    <ul class="headermenu" [ngStyle]="topStyle">
-      <img class="companypic" src="assets\name.png" id="">
-      
-      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
-      <li><a routerLink="/recommend" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Champion Recommendation</a></li>
+<header class="nav">
+    <ul class="nav__menu" [class.show]="show">
+      <img src="assets\name.png">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="headermenuLink">Home</a></li>
+      <li><a routerLink="/recommend" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="headermenuLink">Champion Recommendation</a></li>
     </ul>
   </header>

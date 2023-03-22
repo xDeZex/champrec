@@ -54,7 +54,19 @@ h1, h2, h3, h4, h5{
     color: var(--primary5);
 }
 
-p, span {
+h1, h2, h1 > span, h2 > span {
+    font-family: var(--fontPrimary);
+}
+
+h3, h4, h5 {
+    font-family: var(--fontSecondary);
+}
+
+p {
+    font-family: var(--fontTrimary);
+}
+
+p {
     color: var(--font-bread-color);
 }
 

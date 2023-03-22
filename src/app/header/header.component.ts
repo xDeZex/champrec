@@ -9,20 +9,26 @@ import { WindowScrollService } from '../window-scroll.service';
 export class HeaderComponent {
 
   scrollY: number = 0
-  topStyle = {'top': '0px'}
+  show = true
   
   constructor(public scrollService: WindowScrollService){
     scrollService.scrollY$.subscribe((y: number) => this.scrollUpdate(y))
   }
 
   scrollUpdate(y: number): void {
-    if (y <= this.scrollY){
-      this.topStyle['top'] = '0px'
-
+    console.log(document.activeElement?.classList[0])
+    if(document.activeElement?.classList[0] === "headermenuLink"){
+      this.show = true
     }
     else{
-      this.topStyle['top'] = '-70px'
+      if (y < this.scrollY || y === 0){
+        this.show = true
+      }
+      else {
+        this.show = false
+      }
     }
     this.scrollY = y
+    console.log(this.show)
   }
 }

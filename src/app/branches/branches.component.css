@@ -6,9 +6,12 @@
     gap: 3rem;
 }
 
+.branches h3 {
+    margin: 0 3rem;
+}
+
 #press {
     scroll-margin-top: 3rem;
-
 }
 
 .boxContainer{
@@ -36,6 +39,9 @@
 .textBox p {
     color: black;
     margin-top: 0;
+    
+    font-family:var(--fontTrimary);
+    font-weight: 400;
 }
 
 .textBox:hover{
@@ -97,11 +103,6 @@
     transition: transform 300ms ease-in;
     transform: scaleX(0); 
     transform-origin: 100% 50%; 
-}
-
-.textBox p {
-    font-family:var(--fontTrimary);
-    font-weight: 400;
 }
 
 .textBox:nth-child(even){

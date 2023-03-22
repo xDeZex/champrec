@@ -9,11 +9,7 @@
 }
 
 
-.rec > * {
-    margin-top: 2vh;
-}
-
-.recInput{
+.rec__input{
     display: flex;
     flex-direction: column;
     height: 50%;
@@ -27,7 +23,7 @@ input:-webkit-autofill:active{
     -webkit-text-fill-color: white;
 }
 
-.recInput > input {
+.rec__input > input {
     background-color: var(--primary5);
     border-radius: 10px;
     font-size: 2em;
@@ -37,31 +33,28 @@ input:-webkit-autofill:active{
     border-color: black;
 }
 
-.recInput > p {
+.rec__input > p {
     max-width: 50%;
 }
 
 .inputContainer{
-    flex-grow: 1;
     display: flex;
     align-items:center;
     justify-content: center;
-    height: 100%;
 }
 
-.rectext{
+.rec__text{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     align-items:flex-start;
     padding-left: 10%;
 }
 
-.rectext h1, .rec h1 > span{
+.rec__text h1, .rec h1 > span{
     color: var(--primary5);
 }
 
-.rectext h1, .rec h1 > span, .rectext p{
+.rec__text h1, .rec h1 > span, .rec__text p{
     max-width: 425px;
 }
 
@@ -69,21 +62,11 @@ h1 > span {
     display: block;
 }
 
-.rec a {
-    text-decoration: none;
-    color: var(--trimary2);
-
-}
-
-.rectext p{
-}
-
-.rectext p:last-of-type{
+.rec__text p:last-of-type{
     margin-bottom: auto;
 }
 
-
-.rec button {
+.rec__input button {
     margin-top: 1em;
     padding: 10px;
     border-color: var(--primary5);
@@ -96,7 +79,7 @@ h1 > span {
     cursor:pointer;
 }   
 
-.rec button:last-of-type {
+.rec__input button:last-of-type {
     max-width: none;
     width: 88.156px;
     margin-left: 10px;
@@ -129,32 +112,28 @@ h1 > span {
 
 
 @media only screen and (max-width: 1100px) {
-    .rectext h1, .rec h1 > span, .rectext p{
+    .rec__text h1, .rec h1 > span, .rec__text p{
         max-width: 425px;
     }
     .inputContainer {
         flex-direction: column-reverse;
     }
-    .recInput {
+    .rec__input {
         margin-top: 2em;
         padding-left: 1em;
         padding-right: 1em;
     }
-    .recInput > input{
+    .rec__input > input{
         width: calc(100% - 32px);
     }
-    .rectext {
+    .rec__text {
         padding-left: 1em;
         padding-right: 1em;
         align-items: center;
     }
-    .rectext h1, .rec h1 > span{
+    .rec__text h1, .rec__text h1 > span{
         color: var(--primary5);
         font-size: 60px;
         max-width: 400px;
     }
-    .rec > * {
-        margin-top: 0vh;
-    }
-
 }
