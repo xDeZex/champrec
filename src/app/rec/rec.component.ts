@@ -46,20 +46,16 @@ export class RecComponent {
       let obs = this.recService.getSummoner(this.name)
       obs.subscribe(recJSON => {
         this.response = recJSON
-        console.log(this.response)
-        console.log(this.response.body)
         if (this.response.body != null) {
           if ("one" in this.response.body){
             this.shareService.setRecommendation(this.response.body)
             this.shareService.setSummoner({name: this.name})
             this.shareService.notifyOther()
-            console.log("SEND")
           }
           
         }
         else if ("name" in this.response){
           this.hasCreatedSummoner = true
-          console.log("name")
         }
         this.processingRequest = false
       })

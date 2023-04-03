@@ -16,7 +16,6 @@ export class HeaderComponent {
   }
 
   scrollUpdate(y: number): void {
-    console.log(document.activeElement?.classList[0])
     if(document.activeElement?.classList[0] === "headermenuLink"){
       this.show = true
     }
@@ -29,6 +28,5 @@ export class HeaderComponent {
       }
     }
     this.scrollY = y
-    console.log(this.show)
   }
 }

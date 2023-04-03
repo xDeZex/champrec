@@ -1,5 +1,4 @@
 .rec {
-    height: calc(100vh - 70px);
     position: relative;
     display: flex;
     justify-content: center;
@@ -94,9 +93,6 @@ h1 > span {
 
 
 @media only screen and (max-width: 670px) {
-    .rec {
-        height: calc(100vh - 146px)
-    }
 }
 
 
@@ -111,14 +107,14 @@ h1 > span {
         margin-top: 2em;
         padding-left: 1em;
         padding-right: 1em;
+        width: auto;
     }
     .rec__input > input{
-        width: calc(100% - 32px);
+        width: calc(100% - 2rem);
     }
     .rec__text {
         padding-left: 1em;
         padding-right: 1em;
-        align-items: center;
     }
     .rec__text h1, .rec__text h1 > span{
         color: var(--primary5);

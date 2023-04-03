@@ -14,7 +14,7 @@ export class DisplayRecComponent {
 
   private subscription?: Subscription
 
-  constructor(private shareService: ShareRecommendationService, private router: Router){}
+  constructor(private shareService: ShareRecommendationService){}
 
   recommendation: Recommendation = this.shareService.recommendation
   summoner: Summoner = this.shareService.summoner
@@ -23,14 +23,14 @@ export class DisplayRecComponent {
     this.hide = false
     this.recommendation = this.shareService.recommendation
     this.summoner = this.shareService.summoner
+    const element = document.getElementById("displayRec");
+    element?.scrollIntoView({ behavior: "smooth" });
   }
 
   
   ngOnInit() {
     this.subscription = this.shareService.notifyObservable$.subscribe((res) => {
-      console.log("RECIVE")
       this.newRecommendation()
-      
     });
   }
 

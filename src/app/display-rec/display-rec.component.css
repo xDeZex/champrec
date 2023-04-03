@@ -1,11 +1,32 @@
 .displayRec {
-    height: calc(100vh - 70px);
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 0rem 3rem;
+    margin: 3rem 3rem 0rem;
+    gap: 3rem;
+}
+
+#displayRec{
+    scroll-margin-top: -30rem;
+}
+
+.displayRec::before{
+    display: block;
+    content: "";
+
+
+    height: 1.5rem;
+    background: linear-gradient(45deg, var(--primary5), var(--primary3));
+    border-radius: 1rem;
+    position: absolute;
+    width: 100%;
+    top: -1.5rem;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 .imgContainer > img{
@@ -14,16 +35,16 @@
 }
 
 .imgContainer{
-    
-    flex-basis: 50%;
+    flex-grow: 1;
+    flex-basis: 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .textContainer{
-    
-    flex-basis: 50%;
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 .one {
@@ -48,7 +69,7 @@
     .displayRec{
         flex-direction: column;
         height: auto;
-        margin: 0rem 1rem;
+        margin: 3rem 1rem 0rem;
     }
 
     
