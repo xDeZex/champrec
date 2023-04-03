@@ -39,6 +39,7 @@ export class RecComponent {
 
   getSummoner() {
     if(this.name != "" && !this.processingRequest){
+      this.hasCreatedSummoner = false
       this.processingRequest = true
       this.response.body = null
       this.response.error = null
@@ -46,16 +47,27 @@ export class RecComponent {
       obs.subscribe(recJSON => {
         this.response = recJSON
         console.log(this.response)
+        console.log(this.response.body)
         if (this.response.body != null) {
-          this.shareService.setRecommendation(this.response.body)
-          this.shareService.setSummoner({name: this.name})
-          this.router.navigate(['/recommended'])
+          if ("one" in this.response.body){
+            this.shareService.setRecommendation(this.response.body)
+            this.shareService.setSummoner({name: this.name})
+            this.shareService.notifyOther()
+            console.log("SEND")
+          }
+          
+        }
+        else if ("name" in this.response){
+          this.hasCreatedSummoner = true
+          console.log("name")
         }
         this.processingRequest = false
       })
     }
 
   }
+
+  hasCreatedSummoner = false
   processingRequest: boolean = false
   name: string = ""
   response: ErrorWrapper = {

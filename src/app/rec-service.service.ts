@@ -20,6 +20,9 @@ export class RecServiceService {
   };
   
   public error: string = ""
+
+  private summoner = ""
+
   constructor(
     private http: HttpClient,
   ) { }
@@ -28,6 +31,7 @@ export class RecServiceService {
     //this.createURL = "https://localhost:7158/post/"
 
     let ret: Observable<any> = new Observable()
+
     try {
       
       ret = this.http.post<JSON>(`${this.createURL}${summoner}`, this.httpOptions).pipe(
@@ -37,17 +41,18 @@ export class RecServiceService {
       this.error = error.message
       ret = new Observable
     }
-    
     return ret;
   }
 
   getSummoner(summoner: string): Observable<ErrorWrapper> {
     //this.getURL = "https://localhost:7158/get/"
+
+    this.summoner = summoner
     let ret: Observable<any> = new Observable()
     try {
       
       ret = this.http.get<JSON>(`${this.getURL}${summoner}`, this.httpOptions).pipe(
-        catchError(this.handleError)
+        catchError(this.handleError.bind(this))
       );
     } catch (error: any) {
       this.error = error.message
@@ -58,7 +63,7 @@ export class RecServiceService {
   }
 
 
-  private handleError(error: HttpErrorResponse, caught: Observable<JSON>) {
+  handleError(error: HttpErrorResponse, caught: Observable<JSON>) {
     if (error.status === 0) {
       // A client-side or network error occurred. Handle it accordingly.
     } 
@@ -69,7 +74,10 @@ export class RecServiceService {
       }
       return of(retError)
     }
-    else if (error.status === 404){ 
+    else if (error.status === 404){
+      if (this.summoner !== ""){
+        return this.postSummoner(this.summoner)
+      }
       let retError: ErrorWrapper = {
         body : null,
         error: {message: error.error.detail}

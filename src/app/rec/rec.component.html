@@ -3,10 +3,10 @@
         <div class="rec__input" [class.deactivated] = "processingRequest">
           <input id="name" [class.deactivated] = "processingRequest" [(ngModel)]="name" placeholder="Username..." maxlength="24" [disabled]="processingRequest">
           <div class="buttonContainer" >
-            <button id="button1" [class.deactivated] = "processingRequest" for="name" (click)="createSummoner()">Submit</button>
             <button id="button1" [class.deactivated] = "processingRequest" for="name" (click)="getSummoner()">Get</button>
           </div>
           <p *ngIf="response.error">{{response.error.message}}</p>
+          <p *ngIf="hasCreatedSummoner">That summoner has been added, please check back later for your analysis.</p>
           <span style="display: flex; height: min-content; padding-top: 1em;">
                 <mat-spinner class="loading" *ngIf="processingRequest" diameter=20 strokeWidth=5></mat-spinner>
                 <span style="margin-top: auto; margin-bottom: auto;" *ngIf="processingRequest">AI is analysing your playstyle.</span>

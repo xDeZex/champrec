@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Summoner } from './summoner';
 import { Recommendation } from './recommendation';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +25,12 @@ export class ShareRecommendationService {
   }
   setRecommendation(recommendation: Recommendation){
     this.recommendation = recommendation
+  }
+
+  private notify = new Subject<any>();
+  notifyObservable$ = this.notify.asObservable();
+  
+  public notifyOther() {
+    this.notify.next("");
   }
 }
